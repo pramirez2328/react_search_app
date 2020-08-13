@@ -1,6 +1,8 @@
 import React from "react";
+import List from "./List";
+import Search from "./search";
 
-const list = [
+const stories = [
   {
     title: "React",
     url: "https://reactjs.org/",
@@ -19,28 +21,13 @@ const list = [
     objectID: 1,
   },
 ];
-function Hello() {
+
+function App() {
   return (
     <div>
-      <h1>My Hacker Stories</h1>
-      <label htmlFor="search">Search</label>
-      <input id="search" type="text" />
-      <hr />
-      {list.map((item) => {
-        return (
-          <div key={item.objectID}>
-            <ul>
-              <li>
-                <a href={item.url}>{item.title}</a>
-              </li>
-              <li>Name: {item.author}</li>
-              <li>Number of comments: {item.num_comments}</li>
-              <li>Points: {item.points}</li>
-            </ul>
-          </div>
-        );
-      })}
+      <Search />
+      <List list={stories} />
     </div>
   );
 }
-export default Hello;
+export default App;
