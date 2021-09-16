@@ -3,7 +3,11 @@ body {
     font-family: fantasy;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
+		/* text-align: center; */
+}
+
+#root {
+	text-align: center;
 }
 
 h1 {
@@ -19,6 +23,10 @@ label {
 ul li {
     list-style-type: none;
     color: rgb(126, 3, 3);
+}
+
+hr {
+	width: 80%;
 }
 
 

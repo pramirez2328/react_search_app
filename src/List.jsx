@@ -10,9 +10,15 @@ function List(props) {
               <li>
                 <a href={item.url}>{item.title}</a>
               </li>
-              <li>Name: {item.author}</li>
-              <li>Number of comments: {item.num_comments}</li>
-              <li>Points: {item.points}</li>
+              <li>
+                <strong>Name:</strong> {item.author}
+              </li>
+              <li>
+                <strong>Number of comments:</strong> {item.num_comments}
+              </li>
+              <li>
+                <strong>Points:</strong> {item.points}
+              </li>
             </ul>
           </div>
         );

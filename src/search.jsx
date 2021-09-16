@@ -1,18 +1,12 @@
 import React from "react";
-
-function Search() {
-  const [searchTerm, setSearchTerm] = React.useState("---");
-  const handleChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
-
+function Search(props) {
   return (
     <div>
       <h1>My Hacker Stories</h1>
       <label htmlFor="search">Search</label>
-      <input id="search" type="text" onChange={handleChange} />
+      <input id="search" type="text" value={props.search} onChange={props.onSearch} />
       <p>
-        Searching for <strong>{searchTerm}</strong>.
+        Searching for: <strong>{props.search}</strong>
       </p>
       <hr />
     </div>
