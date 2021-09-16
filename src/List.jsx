@@ -1,27 +1,11 @@
 import React from "react";
+import Item from "./Item";
 
-function List(props) {
+function List({ list }) {
   return (
     <div>
-      {props.list.map((item) => {
-        return (
-          <div key={item.objectID}>
-            <ul>
-              <li>
-                <a href={item.url}>{item.title}</a>
-              </li>
-              <li>
-                <strong>Name:</strong> {item.author}
-              </li>
-              <li>
-                <strong>Number of comments:</strong> {item.num_comments}
-              </li>
-              <li>
-                <strong>Points:</strong> {item.points}
-              </li>
-            </ul>
-          </div>
-        );
+      {list.map(({ id, ...item }) => {
+        return <Item key={id} {...item} />;
       })}
     </div>
   );

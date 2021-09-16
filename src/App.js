@@ -1,17 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import List from "./List";
 import Search from "./search";
 import stories from "./stories";
 
 function App() {
-  const [searchTerm, setSearchTerm] = React.useState("");
-  const [current, setCurrent] = React.useState("");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [current, setCurrent] = useState("");
 
   const handleChange = (event) => {
     let cond = event.target.value;
     setSearchTerm(cond);
     const filterItem = stories.filter((i) => {
-      return i.title.includes(cond) || i.title.toLowerCase().includes(cond);
+      return i.title.toLowerCase().includes(cond) || i.title.includes(cond);
     });
     setCurrent(filterItem);
   };

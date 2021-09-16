@@ -1,12 +1,12 @@
 import React from "react";
-function Search(props) {
+function Search({ search, onSearch }) {
   return (
     <div>
       <h1>My Hacker Stories</h1>
       <label htmlFor="search">Search</label>
-      <input id="search" type="text" value={props.search} onChange={props.onSearch} />
+      <input id="search" type="text" value={search} onChange={onSearch} />
       <p>
-        Searching for: <strong>{props.search}</strong>
+        Searching for: <strong>{search}</strong>
       </p>
       <hr />
     </div>
