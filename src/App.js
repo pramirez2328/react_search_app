@@ -25,7 +25,13 @@ function App() {
 
   return (
     <div>
-      <Search search={searchTerm} onSearch={handleChange} />
+      <Search
+        search={searchTerm}
+        onSearch={handleChange}
+        customLabel="Search"
+        labelName="search"
+        type="text"
+      />
       <List list={current === "" ? stories : current} />
     </div>
   );

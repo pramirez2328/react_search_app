@@ -1,10 +1,10 @@
 import React from "react";
-function Search({ search, onSearch }) {
+function Search({ search, onSearch, customLabel, labelName, type }) {
   return (
     <div>
       <h1>My Hacker Stories</h1>
-      <label htmlFor="search">Search</label>
-      <input id="search" type="text" value={search} onChange={onSearch} />
+      <label htmlFor={labelName}>{customLabel}</label>
+      <input id={labelName} type={type} value={search} onChange={onSearch} />
       <p>
         Searching for: <strong>{search}</strong>
       </p>
