@@ -1,17 +1,26 @@
-import React from "react";
+import React, { useRef } from "react";
 
 function CustomSearch({
   labelName,
-  customLabel,
   type,
   search,
   onSearch,
   children,
+  isFocused,
 }) {
+  const inputRef = useRef(true);
+
   return (
     <div>
       <label htmlFor={labelName}>{children}</label>
-      <input id={labelName} type={type} value={search} onChange={onSearch} />
+      <input
+        ref={inputRef}
+        autoFocus={isFocused}
+        id={labelName}
+        type={type}
+        value={search}
+        onChange={onSearch}
+      />
     </div>
   );
 }

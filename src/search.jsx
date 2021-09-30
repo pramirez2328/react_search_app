@@ -1,15 +1,15 @@
 import React from "react";
 import CustomSearch from "./CustomSearch";
-function Search({ search, onSearch, customLabel, labelName, type, children }) {
+function Search({ search, onSearch, labelName, type, isFocused }) {
   return (
     <div>
       <h1>My Hacker Stories</h1>
       <CustomSearch
         labelName={labelName}
-        customLabel={customLabel}
         type={type}
         search={search}
         onSearch={onSearch}
+        autoFocus
       >
         <p>
           Searching for: <strong>{search}</strong>

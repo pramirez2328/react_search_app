@@ -28,9 +28,9 @@ function App() {
       <Search
         search={searchTerm}
         onSearch={handleChange}
-        customLabel="Search"
         labelName="search"
         type="text"
+        isFocused
       />
       <List list={current === "" ? stories : current} />
     </div>
